@@ -89,6 +89,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 1.5rem;displ
 .testi-name{font-size:0.78rem;font-weight:700;color:var(--star);}
 .testi-handle{font-size:0.67rem;color:var(--muted);}
 
+/* PROD CARD */
+.prod-card{max-width:560px;margin:0 auto;padding:2rem 1.75rem;border:1px solid rgba(124,92,252,0.18);border-radius:1.75rem;background:rgba(124,92,252,0.04);text-align:left;}
+.prod-desc{font-size:0.95rem;line-height:1.85;color:var(--dim);margin-bottom:1rem;}
+.garantia{display:flex;align-items:flex-start;gap:0.85rem;padding:1.1rem 1.25rem;border:1px solid rgba(124,92,252,0.2);border-radius:1rem;background:rgba(124,92,252,0.07);margin:1.5rem 0;font-size:0.85rem;line-height:1.6;color:var(--star);}
+.garantia-icon{font-size:1.3rem;flex-shrink:0;}
+.garantia strong{color:#fff;}
+
 /* PRODUCT 2 */
 .product2{padding:6rem 1.5rem;background:linear-gradient(180deg,transparent,rgba(252,92,163,0.04),transparent);}
 .product2-inner{max-width:600px;margin:0 auto;text-align:center;}
@@ -177,25 +184,36 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
 
 <div class="wrap">
 
-  <!-- HERO -->
+  <!-- PRODUCTO 1 -->
   <section class="hero">
     <span class="pill">Protocolo · Nivel I · 15 días</span>
     <h1 class="hero-title">
-      Tu mente<br>
-      <span class="accent">no para</span><br>
-      <span class="serif">y tu cuerpo lo paga.</span>
+      Protocolo de<br>
+      <span class="accent">15 días</span><br>
+      <span class="serif">para dejar de sobrepensar.</span>
     </h1>
-    <p class="hero-sub">No es ansiedad, no es debilidad. Es que nadie te enseñó a apagarla. Este protocolo sí.</p>
+
     <div class="hero-book">
       <div class="hero-book-glow"></div>
-      <img src="https://i.postimg.cc/LJD9ZXX9/portada-azul.png" alt="Protocolo Nivel I">
+      <img src="https://i.postimg.cc/LJD9ZXxx9/portada-azul.png" alt="Protocolo Nivel I">
     </div>
-    <div class="hero-price">
-      <span class="price-old">$19.99</span>
-      <span class="price-new">$7.99</span>
-      <span class="price-tag">Acceso inmediato</span>
+
+    <div class="prod-card">
+      <p class="prod-desc">No es un libro para "sentirte mejor". Es un sistema para recuperar el control de tu mente.</p>
+      <p class="prod-desc">Este protocolo está diseñado para personas que viven atrapadas en el sobrepensamiento, la ansiedad constante y la falta de enfoque. A lo largo de 15 días, vas a aplicar técnicas prácticas que actúan directamente sobre tu sistema nervioso, ayudándote a cortar el ruido mental y volver a la acción.</p>
+      <p class="prod-desc">Acá no vas a encontrar frases vacías ni teoría innecesaria. Cada día tiene una misión concreta que te entrena a pensar menos y vivir más.</p>
+      <p class="prod-desc">Si sentís que tu mente no se apaga nunca, este es el punto de partida para recuperar claridad, control y presencia.</p>
+      <div class="garantia">
+        <span class="garantia-icon">🛡️</span>
+        <span><strong>7 días de garantía.</strong> Si no te sirve, te devolvemos el dinero. Sin preguntas.</span>
+      </div>
+      <div class="hero-price">
+        <span class="price-old">$19.99</span>
+        <span class="price-new">$7.99</span>
+        <span class="price-tag">Acceso inmediato</span>
+      </div>
+      <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary">Comprar ahora</a>
     </div>
-    <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary">Quiero dejar de sobrepensar</a>
   </section>
 
   <!-- FEELINGS -->
@@ -268,7 +286,7 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
         </div>
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Nunca creí en este tipo de cosas, pero lo compré porque eran $7.99 y tenía curiosidad. Me arrepiento de no haberlo encontrado antes."</p>
+          <p class="testi-text">"Nunca creí en este tipo de cosas, pero lo compré porque eran 20000 pesos y tenía curiosidad. Me arrepiento de no haberlo encontrado antes."</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:rgba(252,92,163,0.12);color:var(--rose);">CR</div>
             <div>
@@ -299,17 +317,28 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
     <div class="product2-inner">
       <span class="badge-off">40% OFF · Lanzamiento</span>
       <h2 class="product2-title">El Código<br><span class="rose">del Corazón</span></h2>
-      <p class="section-body">Para cuando el problema no es la mente que no para, sino el corazón que no suelta. Un protocolo para salir del apego, los vínculos que duelen y las relaciones que agotan.</p>
+
       <div class="product2-book">
         <div class="product2-book-glow"></div>
         <img src="https://via.placeholder.com/600x800/0a0515/fc5ca3?text=CÓDIGO+DEL+CORAZÓN" alt="El Código del Corazón">
       </div>
-      <div class="hero-price" style="justify-content:center;margin-top:0;">
-        <span class="price-old">$24.99</span>
-        <span class="price-new" style="color:var(--rose)">$14.99</span>
-        <span class="price-tag" style="color:var(--rose)">Acceso inmediato</span>
+
+      <div class="prod-card" style="border-color:rgba(252,92,163,0.2);background:rgba(252,92,163,0.04);">
+        <p class="prod-desc">Este ebook explica, de forma clara y profunda, por qué el apego emocional duele tanto y cómo salir de ese ciclo sin perder tu sensibilidad. No se trata de volverte frío, sino de construir una forma más sana y fuerte de vincularte.</p>
+        <p class="prod-desc">A través de un enfoque basado en la psicología y la biología del comportamiento, vas a entender qué pasa en tu mente cuando no podés soltar, y cómo empezar a reconstruir tu identidad sin depender de otra persona.</p>
+        <p class="prod-desc">Incluye un proceso paso a paso para cortar la dependencia emocional, tolerar el vacío y volver a elegir desde la seguridad, no desde la necesidad.</p>
+        <p class="prod-desc">Si alguna vez sentiste que alguien tenía demasiado poder sobre vos, este libro te muestra cómo recuperarlo.</p>
+        <div class="garantia" style="border-color:rgba(252,92,163,0.2);background:rgba(252,92,163,0.06);">
+          <span class="garantia-icon">🛡️</span>
+          <span><strong>7 días de garantía.</strong> Si no te sirve, te devolvemos el dinero. Sin preguntas.</span>
+        </div>
+        <div class="hero-price" style="justify-content:center;margin-top:1.5rem;">
+          <span class="price-old">$24.99</span>
+          <span class="price-new" style="color:var(--rose)">$14.99</span>
+          <span class="price-tag" style="color:var(--rose)">Acceso inmediato</span>
+        </div>
+        <a href="https://pay.hotmart.com/B104427503H" target="_blank" class="btn-rose">Comprar ahora</a>
       </div>
-      <a href="https://go.hotmart.com/B104427503H?dp=1" target="_blank" class="btn-rose">Quiero soltar lo que me pesa</a>
     </div>
   </section>
 
@@ -365,7 +394,7 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
       </div>
       <div class="pricing-btns">
         <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary" style="max-width:100%">Quiero dejar de sobrepensar — $7.99</a>
-        <a href="https://go.hotmart.com/B104427503H?dp=1" target="_blank" class="btn-rose" style="max-width:100%">Quiero soltar lo que me pesa — $14.99</a>
+        <a href="https://pay.hotmart.com/B104427503H" target="_blank" class="btn-rose" style="max-width:100%">Quiero soltar lo que me pesa — $14.99</a>
       </div>
       <p class="pricing-note">Pago seguro · Sin renovaciones automáticas</p>
     </div>
