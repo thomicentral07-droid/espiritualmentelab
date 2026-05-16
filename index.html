@@ -14,6 +14,7 @@
 }
 html{scroll-behavior:smooth;}
 body{background:var(--void);color:var(--star);font-family:'Syne',sans-serif;overflow-x:hidden;}
+
 #stars-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;}
 .nebula{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(130px);opacity:0.28;}
 .n1{width:600px;height:600px;background:radial-gradient(circle,#4a1a9a,transparent 70%);top:-150px;left:-100px;animation:d1 28s ease-in-out infinite alternate;}
@@ -23,151 +24,159 @@ body{background:var(--void);color:var(--star);font-family:'Syne',sans-serif;over
 @keyframes d2{to{transform:translate(-50px,-60px) scale(0.9);}}
 @keyframes d3{to{transform:translate(30px,-30px) scale(1.08);}}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(124,92,252,0.1);background:rgba(4,3,10,0.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1rem;letter-spacing:0.2em;color:var(--star);text-decoration:none;opacity:0.8;}
-.nav-cta{font-size:0.58rem;font-weight:800;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.5rem 1.2rem;border-radius:100px;text-decoration:none;transition:all 0.3s;white-space:nowrap;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(124,92,252,0.1);background:rgba(4,3,10,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:0.95rem;letter-spacing:0.2em;color:var(--star);text-decoration:none;opacity:0.8;}
+.nav-cta{font-size:0.55rem;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.45rem 1rem;border-radius:100px;text-decoration:none;transition:all 0.3s;white-space:nowrap;}
 .nav-cta:hover{background:var(--accent);color:#fff;}
 
 .wrap{position:relative;z-index:1;}
 
-.btn-primary{display:block;width:100%;max-width:440px;margin:0 auto;background:var(--accent);color:#fff;padding:1.2rem 2rem;border-radius:100px;font-size:0.72rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;text-align:center;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);box-shadow:0 8px 40px var(--accent-glow);}
-.btn-primary:hover{transform:translateY(-4px);box-shadow:0 16px 50px var(--accent-glow);}
-.btn-rose{display:block;width:100%;max-width:440px;margin:0 auto;background:var(--rose);color:#fff;padding:1.2rem 2rem;border-radius:100px;font-size:0.72rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;text-align:center;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);box-shadow:0 8px 40px rgba(252,92,163,0.35);}
-.btn-rose:hover{transform:translateY(-4px);box-shadow:0 16px 50px rgba(252,92,163,0.5);}
+/* BOTONES */
+.btn-primary{display:block;width:100%;background:var(--accent);color:#fff;padding:1.1rem 1.5rem;border-radius:100px;font-size:0.7rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;text-align:center;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);box-shadow:0 8px 40px var(--accent-glow);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 50px var(--accent-glow);}
+.btn-rose{display:block;width:100%;background:var(--rose);color:#fff;padding:1.1rem 1.5rem;border-radius:100px;font-size:0.7rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;text-align:center;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);box-shadow:0 8px 40px rgba(252,92,163,0.35);}
+.btn-rose:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(252,92,163,0.5);}
 
 .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(124,92,252,0.3),rgba(252,92,163,0.2),transparent);position:relative;z-index:1;}
 
-/* HERO */
-.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8rem 1.5rem 5rem;text-align:center;}
-.pill{display:inline-block;font-size:0.58rem;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-soft);background:var(--accent-soft);padding:0.45rem 1.1rem;border-radius:100px;margin-bottom:1.75rem;}
-.hero-title{font-size:clamp(3rem,13vw,6.5rem);font-weight:800;line-height:0.88;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:1.25rem;}
+/* SECCIONES BASE */
+.section{padding:5rem 1.25rem;width:100%;}
+.section-inner{max-width:560px;margin:0 auto;width:100%;}
+.centered{text-align:center;display:flex;flex-direction:column;align-items:center;}
+
+.pill{display:inline-block;font-size:0.55rem;font-weight:700;letter-spacing:0.38em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-soft);background:var(--accent-soft);padding:0.42rem 1rem;border-radius:100px;margin-bottom:1.5rem;}
+
+/* HERO TITLE */
+.hero-title{font-size:clamp(2.8rem,12vw,5.5rem);font-weight:800;line-height:0.88;letter-spacing:-0.02em;text-transform:uppercase;margin-bottom:1.25rem;text-align:center;}
 .hero-title .accent{color:var(--accent);}
-.hero-title .serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:0.78em;text-transform:none;color:var(--dim);display:block;letter-spacing:0.02em;}
-.hero-sub{font-size:clamp(0.95rem,3.5vw,1.1rem);line-height:1.75;color:var(--dim);max-width:460px;margin:0 auto 2rem;}
-.hero-book{position:relative;margin:2.5rem auto;max-width:230px;}
-.hero-book-glow{position:absolute;inset:-30px;background:radial-gradient(circle,rgba(124,92,252,0.3),transparent 70%);border-radius:50%;filter:blur(40px);}
-.hero-book img{position:relative;z-index:2;width:100%;border-radius:1.2rem;box-shadow:0 30px 80px rgba(0,0,0,0.8);animation:float 7s ease-in-out infinite;border:1px solid rgba(255,255,255,0.08);}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg);}50%{transform:translateY(-16px) rotate(1deg);}}
-.hero-price{display:flex;align-items:baseline;gap:1rem;justify-content:center;margin-bottom:1.75rem;}
-.price-old{font-size:1rem;text-decoration:line-through;color:var(--muted);}
-.price-new{font-size:2.8rem;font-weight:800;}
-.price-tag{font-size:0.58rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);}
+.hero-title .serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:0.75em;text-transform:none;color:var(--dim);display:block;letter-spacing:0.02em;}
 
-/* FEELINGS */
-.feelings{padding:3.5rem 1.5rem;background:rgba(124,92,252,0.04);border-top:1px solid rgba(124,92,252,0.08);border-bottom:1px solid rgba(124,92,252,0.08);}
-.feelings-inner{max-width:660px;margin:0 auto;}
-.feelings-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,5vw,2rem);font-weight:300;text-align:center;color:var(--dim);line-height:1.5;margin-bottom:2rem;}
-.feelings-list{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;}
-.feeling-chip{font-size:0.78rem;padding:0.6rem 1.1rem;border-radius:100px;border:1px solid rgba(124,92,252,0.18);color:var(--dim);background:rgba(124,92,252,0.03);}
-.feeling-chip.on{border-color:var(--accent);color:var(--star);background:var(--accent-soft);}
-
-/* SPIRITUAL */
-.spiritual{padding:6rem 1.5rem;}
-.spiritual-inner{max-width:600px;margin:0 auto;text-align:center;}
-.section-label{font-size:0.58rem;font-weight:700;letter-spacing:0.45em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:block;}
-.section-title{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,9vw,3.8rem);font-weight:800;text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:1.5rem;}
-.section-body{font-size:1rem;line-height:1.85;color:var(--dim);margin-bottom:2.5rem;}
-.steps{display:flex;flex-direction:column;gap:1rem;text-align:left;}
-.step{display:flex;align-items:flex-start;gap:1.2rem;padding:1.25rem 1.5rem;border:1px solid rgba(124,92,252,0.12);border-radius:1.25rem;background:rgba(124,92,252,0.04);transition:all 0.3s;}
-.step:hover{border-color:rgba(124,92,252,0.28);background:rgba(124,92,252,0.08);}
-.step-icon{font-size:1rem;color:var(--accent);flex-shrink:0;margin-top:0.15rem;}
-.step-title{font-size:0.85rem;font-weight:700;color:var(--star);margin-bottom:0.25rem;}
-.step-sub{font-size:0.78rem;color:var(--muted);line-height:1.55;}
-
-/* TESTIMONIALS */
-.testimonials{padding:6rem 1.5rem;background:rgba(7,5,26,0.5);}
-.testimonials-inner{max-width:600px;margin:0 auto;}
-.testi-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,7vw,2.8rem);font-weight:800;text-transform:uppercase;text-align:center;letter-spacing:-0.02em;margin-bottom:0.5rem;}
-.testi-serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;text-transform:none;color:var(--dim);font-size:0.85em;}
-.testi-sub{text-align:center;color:var(--muted);font-size:0.78rem;margin-bottom:3rem;}
-.testi-grid{display:flex;flex-direction:column;gap:1.25rem;}
-.testi-card{padding:1.75rem;border:1px solid rgba(124,92,252,0.12);border-radius:1.5rem;background:rgba(124,92,252,0.04);}
-.testi-stars{color:var(--gold);font-size:0.85rem;margin-bottom:0.85rem;letter-spacing:0.1em;}
-.testi-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;font-weight:300;line-height:1.65;color:var(--star);margin-bottom:1.25rem;}
-.testi-author{display:flex;align-items:center;gap:0.85rem;}
-.testi-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;flex-shrink:0;}
-.testi-name{font-size:0.78rem;font-weight:700;color:var(--star);}
-.testi-handle{font-size:0.67rem;color:var(--muted);}
+/* IMAGEN LIBRO */
+.book-wrap{position:relative;margin:2rem auto;width:100%;max-width:220px;display:flex;justify-content:center;}
+.book-glow{position:absolute;inset:-25px;border-radius:50%;filter:blur(40px);opacity:0.5;}
+.book-wrap img{position:relative;z-index:2;width:100%;height:auto;border-radius:1.1rem;box-shadow:0 30px 80px rgba(0,0,0,0.85);border:1px solid rgba(255,255,255,0.08);}
+.float-1{animation:float1 7s ease-in-out infinite;}
+.float-2{animation:float2 8s ease-in-out infinite;}
+@keyframes float1{0%,100%{transform:translateY(0) rotate(-1deg);}50%{transform:translateY(-14px) rotate(1deg);}}
+@keyframes float2{0%,100%{transform:translateY(0) rotate(1deg);}50%{transform:translateY(-12px) rotate(-0.5deg);}}
 
 /* PROD CARD */
-.prod-card{max-width:560px;margin:0 auto;padding:2rem 1.75rem;border:1px solid rgba(124,92,252,0.18);border-radius:1.75rem;background:rgba(124,92,252,0.04);text-align:left;}
-.prod-desc{font-size:0.95rem;line-height:1.85;color:var(--dim);margin-bottom:1rem;}
-.garantia{display:flex;align-items:flex-start;gap:0.85rem;padding:1.1rem 1.25rem;border:1px solid rgba(124,92,252,0.2);border-radius:1rem;background:rgba(124,92,252,0.07);margin:1.5rem 0;font-size:0.85rem;line-height:1.6;color:var(--star);}
-.garantia-icon{font-size:1.3rem;flex-shrink:0;}
-.garantia strong{color:#fff;}
+.prod-card{width:100%;padding:1.75rem 1.5rem;border:1px solid rgba(124,92,252,0.18);border-radius:1.5rem;background:rgba(124,92,252,0.04);text-align:left;margin-top:1.5rem;}
+.prod-card.rose-card{border-color:rgba(252,92,163,0.2);background:rgba(252,92,163,0.04);}
+.prod-desc{font-size:0.92rem;line-height:1.85;color:var(--dim);margin-bottom:1rem;}
 
-/* PRODUCT 2 */
-.product2{padding:6rem 1.5rem;background:linear-gradient(180deg,transparent,rgba(252,92,163,0.04),transparent);}
-.product2-inner{max-width:600px;margin:0 auto;text-align:center;}
-.badge-off{display:inline-block;background:var(--rose);color:#fff;font-size:0.58rem;font-weight:800;letter-spacing:0.35em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem;}
-.product2-title{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,11vw,4.5rem);font-weight:800;text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:1.5rem;}
+/* PRECIO */
+.price-row{display:flex;align-items:baseline;gap:0.85rem;justify-content:center;margin:1.5rem 0 1.25rem;flex-wrap:wrap;}
+.price-old{font-size:1rem;text-decoration:line-through;color:var(--muted);}
+.price-new{font-size:2.5rem;font-weight:800;line-height:1;}
+.price-tag{font-size:0.55rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--accent);}
+.price-tag.rose{color:var(--rose);}
+
+/* GARANTIA */
+.garantia{display:flex;align-items:flex-start;gap:0.8rem;padding:1rem 1.1rem;border:1px solid rgba(124,92,252,0.2);border-radius:1rem;background:rgba(124,92,252,0.07);margin:1.25rem 0;font-size:0.82rem;line-height:1.6;color:var(--star);}
+.garantia.rose-g{border-color:rgba(252,92,163,0.2);background:rgba(252,92,163,0.06);}
+.garantia-icon{font-size:1.2rem;flex-shrink:0;}
+
+/* FEELINGS */
+.feelings{padding:3rem 1.25rem;background:rgba(124,92,252,0.04);border-top:1px solid rgba(124,92,252,0.08);border-bottom:1px solid rgba(124,92,252,0.08);}
+.feelings-inner{max-width:560px;margin:0 auto;}
+.feelings-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.3rem,5vw,1.8rem);font-weight:300;text-align:center;color:var(--dim);line-height:1.5;margin-bottom:1.75rem;}
+.feelings-list{display:flex;flex-wrap:wrap;gap:0.65rem;justify-content:center;}
+.feeling-chip{font-size:0.75rem;padding:0.55rem 1rem;border-radius:100px;border:1px solid rgba(124,92,252,0.18);color:var(--dim);background:rgba(124,92,252,0.03);}
+.feeling-chip.on{border-color:var(--accent);color:var(--star);background:var(--accent-soft);}
+
+/* SECTION TITLES */
+.section-label{font-size:0.55rem;font-weight:700;letter-spacing:0.42em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:block;text-align:center;}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,9vw,3.5rem);font-weight:800;text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:1.25rem;text-align:center;}
+.section-body{font-size:0.95rem;line-height:1.85;color:var(--dim);margin-bottom:2rem;text-align:center;}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:0.85rem;text-align:left;width:100%;}
+.step{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.25rem;border:1px solid rgba(124,92,252,0.12);border-radius:1.1rem;background:rgba(124,92,252,0.04);transition:all 0.3s;}
+.step:hover{border-color:rgba(124,92,252,0.28);background:rgba(124,92,252,0.08);}
+.step-icon{font-size:0.95rem;color:var(--accent);flex-shrink:0;margin-top:0.15rem;}
+.step-title{font-size:0.82rem;font-weight:700;color:var(--star);margin-bottom:0.2rem;}
+.step-sub{font-size:0.75rem;color:var(--muted);line-height:1.5;}
+
+/* TESTIMONIALS */
+.testi-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,7vw,2.5rem);font-weight:800;text-transform:uppercase;text-align:center;letter-spacing:-0.02em;margin-bottom:0.4rem;}
+.testi-serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;text-transform:none;color:var(--dim);font-size:0.85em;}
+.testi-sub{text-align:center;color:var(--muted);font-size:0.75rem;margin-bottom:2.5rem;}
+.testi-grid{display:flex;flex-direction:column;gap:1rem;width:100%;}
+.testi-card{padding:1.5rem;border:1px solid rgba(124,92,252,0.12);border-radius:1.25rem;background:rgba(124,92,252,0.04);}
+.testi-stars{color:var(--gold);font-size:0.82rem;margin-bottom:0.75rem;letter-spacing:0.08em;}
+.testi-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.08rem;font-weight:300;line-height:1.65;color:var(--star);margin-bottom:1.1rem;}
+.testi-author{display:flex;align-items:center;gap:0.75rem;}
+.testi-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.68rem;font-weight:800;flex-shrink:0;}
+.testi-name{font-size:0.75rem;font-weight:700;color:var(--star);}
+.testi-handle{font-size:0.64rem;color:var(--muted);}
+
+/* BADGE */
+.badge-off{display:inline-block;background:var(--rose);color:#fff;font-size:0.55rem;font-weight:800;letter-spacing:0.32em;text-transform:uppercase;padding:0.38rem 0.9rem;border-radius:100px;margin-bottom:1.25rem;}
+
+/* PRODUCT2 TITLE */
+.product2-title{font-family:'Syne',sans-serif;font-size:clamp(2.3rem,10vw,4rem);font-weight:800;text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:1.25rem;text-align:center;}
 .product2-title .rose{color:var(--rose);}
-.product2-book{position:relative;margin:2.5rem auto;max-width:200px;}
-.product2-book-glow{position:absolute;inset:-30px;background:radial-gradient(circle,rgba(252,92,163,0.25),transparent 70%);border-radius:50%;filter:blur(40px);}
-.product2-book img{position:relative;z-index:2;width:100%;border-radius:1.2rem;box-shadow:0 30px 80px rgba(0,0,0,0.8);animation:float2 8s ease-in-out infinite;border:1px solid rgba(255,255,255,0.06);}
-@keyframes float2{0%,100%{transform:translateY(0) rotate(1deg);}50%{transform:translateY(-14px) rotate(-0.5deg);}}
 
 /* FAQ */
-.faq{padding:6rem 1.5rem;}
-.faq-inner{max-width:600px;margin:0 auto;}
-.faq-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,7vw,2.8rem);font-weight:800;text-transform:uppercase;text-align:center;letter-spacing:-0.02em;margin-bottom:2.5rem;}
+.faq-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,7vw,2.5rem);font-weight:800;text-transform:uppercase;text-align:center;letter-spacing:-0.02em;margin-bottom:2rem;}
 .faq-serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;text-transform:none;color:var(--dim);}
-details{border:1px solid rgba(124,92,252,0.12);border-radius:1rem;margin-bottom:0.75rem;background:rgba(124,92,252,0.03);overflow:hidden;}
-details[open]{border-color:rgba(124,92,252,0.3);background:rgba(124,92,252,0.06);}
-details summary{padding:1.3rem 1.5rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:0.82rem;font-weight:700;color:var(--star);user-select:none;gap:1rem;}
+details{border:1px solid rgba(124,92,252,0.12);border-radius:1rem;margin-bottom:0.65rem;background:rgba(124,92,252,0.03);overflow:hidden;width:100%;}
+details[open]{border-color:rgba(124,92,252,0.28);background:rgba(124,92,252,0.06);}
+details summary{padding:1.1rem 1.25rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;font-weight:700;color:var(--star);user-select:none;gap:0.85rem;}
 details summary::-webkit-details-marker{display:none;}
 details summary svg{transition:transform 0.3s;color:var(--accent);flex-shrink:0;}
 details[open] summary svg{transform:rotate(180deg);}
-.faq-body{padding:0 1.5rem 1.25rem;font-size:0.9rem;line-height:1.8;color:var(--dim);}
+.faq-body{padding:0 1.25rem 1.1rem;font-size:0.85rem;line-height:1.8;color:var(--dim);}
 
 /* PRICING */
-.pricing{padding:6rem 1.5rem;text-align:center;position:relative;overflow:hidden;}
+.pricing{padding:5rem 1.25rem;text-align:center;position:relative;overflow:hidden;}
 .orbit-ring{position:absolute;border-radius:50%;border:1px solid rgba(124,92,252,0.06);pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%);}
-.pricing-card{position:relative;z-index:2;max-width:560px;margin:0 auto;border:1px solid rgba(124,92,252,0.2);border-radius:2rem;padding:3rem 1.75rem;background:rgba(7,5,26,0.88);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);}
-.pricing-eyebrow{font-size:0.58rem;font-weight:700;letter-spacing:0.45em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;display:block;}
-.pricing-headline{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,9vw,4rem);font-weight:800;text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:2rem;}
-.pricing-products{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
-.pricing-product{padding:1.5rem;border:1px solid rgba(124,92,252,0.12);border-radius:1.25rem;background:rgba(124,92,252,0.04);text-align:left;}
+.pricing-card{position:relative;z-index:2;max-width:560px;margin:0 auto;border:1px solid rgba(124,92,252,0.2);border-radius:1.75rem;padding:2.5rem 1.5rem;background:rgba(7,5,26,0.9);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);width:100%;}
+.pricing-eyebrow{font-size:0.55rem;font-weight:700;letter-spacing:0.42em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:block;}
+.pricing-headline{font-family:'Syne',sans-serif;font-size:clamp(2rem,9vw,3.5rem);font-weight:800;text-transform:uppercase;line-height:0.9;letter-spacing:-0.02em;margin-bottom:1.75rem;}
+.pricing-products{display:flex;flex-direction:column;gap:0.85rem;margin-bottom:1.75rem;width:100%;}
+.pricing-product{padding:1.25rem;border:1px solid rgba(124,92,252,0.12);border-radius:1.1rem;background:rgba(124,92,252,0.04);text-align:left;}
 .pricing-product.rose-b{border-color:rgba(252,92,163,0.15);background:rgba(252,92,163,0.04);}
-.pp-label{font-size:0.58rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem;}
+.pp-label{font-size:0.55rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--accent);margin-bottom:0.35rem;}
 .pp-label.rose{color:var(--rose);}
-.pp-name{font-size:0.95rem;font-weight:700;color:var(--star);margin-bottom:0.75rem;line-height:1.3;}
-.pp-prices{display:flex;align-items:baseline;gap:0.75rem;}
-.pp-old{font-size:0.9rem;text-decoration:line-through;color:var(--muted);}
-.pp-new{font-size:2rem;font-weight:800;}
+.pp-name{font-size:0.88rem;font-weight:700;color:var(--star);margin-bottom:0.6rem;line-height:1.3;}
+.pp-prices{display:flex;align-items:baseline;gap:0.65rem;}
+.pp-old{font-size:0.85rem;text-decoration:line-through;color:var(--muted);}
+.pp-new{font-size:1.8rem;font-weight:800;}
 .pp-new.rose{color:var(--rose);}
-.pricing-divider{width:100%;height:1px;background:rgba(124,92,252,0.1);margin:1.75rem 0;}
-.pricing-features{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin-bottom:2rem;}
-.feat-chip{font-size:0.58rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;padding:0.45rem 0.9rem;border-radius:100px;border:1px solid rgba(124,92,252,0.18);color:var(--muted);}
-.pricing-btns{display:flex;flex-direction:column;gap:0.85rem;}
-.pricing-note{font-size:0.55rem;font-weight:700;letter-spacing:0.4em;text-transform:uppercase;color:var(--muted);margin-top:1.5rem;opacity:0.35;}
+.pricing-divider{width:100%;height:1px;background:rgba(124,92,252,0.1);margin:1.5rem 0;}
+.pricing-features{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-bottom:1.5rem;}
+.feat-chip{font-size:0.55rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 0.8rem;border-radius:100px;border:1px solid rgba(124,92,252,0.18);color:var(--muted);}
+.pricing-btns{display:flex;flex-direction:column;gap:0.75rem;width:100%;}
+.pricing-note{font-size:0.5rem;font-weight:700;letter-spacing:0.38em;text-transform:uppercase;color:var(--muted);margin-top:1.25rem;opacity:0.35;}
 
 /* RECOM */
-.recom{padding:6rem 1.5rem;}
-.recom-inner{max-width:600px;margin:0 auto;text-align:center;}
-.recom-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,7vw,2.8rem);font-weight:800;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:0.75rem;}
-.recom-serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;text-transform:none;color:var(--gold);font-size:1.05em;}
-.recom-sub{text-align:center;color:var(--dim);font-size:0.9rem;line-height:1.7;max-width:460px;margin:0 auto 2.5rem;}
-.recom-card{display:flex;align-items:center;gap:1.5rem;padding:2rem 1.75rem;border:1px solid rgba(245,200,66,0.15);border-radius:1.75rem;background:rgba(245,200,66,0.03);text-decoration:none;color:inherit;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);text-align:left;}
-.recom-card:hover{border-color:rgba(245,200,66,0.35);transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,0.5);}
-.recom-book-visual{display:flex;flex-shrink:0;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.6));transition:transform 0.4s;}
-.recom-card:hover .recom-book-visual{transform:rotate(-3deg) translateY(-4px);}
-.book-spine{width:15px;height:135px;background:linear-gradient(180deg,#3a2a00,#c49a00,#7a5500);border-radius:3px 0 0 3px;}
-.book-face{width:88px;height:135px;background:linear-gradient(160deg,#1a1400,#2a2000,#0d0900);border:1px solid rgba(245,200,66,0.3);border-left:none;border-radius:0 5px 5px 0;display:flex;align-items:center;justify-content:center;padding:0.65rem;}
-.book-face-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.58rem;color:rgba(245,200,66,0.85);line-height:1.4;text-align:center;}
+.recom-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,7vw,2.5rem);font-weight:800;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:0.65rem;text-align:center;}
+.recom-serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;text-transform:none;color:var(--gold);}
+.recom-sub{text-align:center;color:var(--dim);font-size:0.88rem;line-height:1.7;margin:0 auto 2rem;}
+.recom-card{display:flex;align-items:center;gap:1.25rem;padding:1.5rem;border:1px solid rgba(245,200,66,0.15);border-radius:1.5rem;background:rgba(245,200,66,0.03);text-decoration:none;color:inherit;transition:all 0.4s cubic-bezier(0.23,1,0.32,1);text-align:left;width:100%;}
+.recom-card:hover{border-color:rgba(245,200,66,0.35);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,0.5);}
+.recom-book-visual{display:flex;flex-shrink:0;filter:drop-shadow(0 10px 25px rgba(0,0,0,0.6));transition:transform 0.4s;}
+.recom-card:hover .recom-book-visual{transform:rotate(-3deg) translateY(-3px);}
+.book-spine{width:13px;height:120px;background:linear-gradient(180deg,#3a2a00,#c49a00,#7a5500);border-radius:3px 0 0 3px;}
+.book-face{width:80px;height:120px;background:linear-gradient(160deg,#1a1400,#2a2000,#0d0900);border:1px solid rgba(245,200,66,0.3);border-left:none;border-radius:0 5px 5px 0;display:flex;align-items:center;justify-content:center;padding:0.55rem;}
+.book-face-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.55rem;color:rgba(245,200,66,0.85);line-height:1.4;text-align:center;}
 .recom-info{flex:1;min-width:0;}
-.recom-tag{display:inline-block;font-size:0.55rem;font-weight:700;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,200,66,0.2);background:rgba(245,200,66,0.06);padding:0.28rem 0.75rem;border-radius:100px;margin-bottom:0.6rem;}
-.recom-name{font-size:0.92rem;font-weight:700;color:var(--star);line-height:1.25;margin-bottom:0.5rem;}
-.recom-desc{font-size:0.78rem;line-height:1.65;color:var(--dim);margin-bottom:0.85rem;}
-.recom-cta{font-size:0.62rem;font-weight:800;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.5rem;transition:gap 0.3s;}
-.recom-card:hover .recom-cta{gap:0.85rem;}
+.recom-tag{display:inline-block;font-size:0.52rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,200,66,0.2);background:rgba(245,200,66,0.06);padding:0.25rem 0.65rem;border-radius:100px;margin-bottom:0.5rem;}
+.recom-name{font-size:0.85rem;font-weight:700;color:var(--star);line-height:1.25;margin-bottom:0.45rem;}
+.recom-desc{font-size:0.75rem;line-height:1.65;color:var(--dim);margin-bottom:0.75rem;}
+.recom-cta{font-size:0.58rem;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.45rem;transition:gap 0.3s;}
+.recom-card:hover .recom-cta{gap:0.75rem;}
 
-footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-align:center;background:rgba(4,3,10,0.9);position:relative;z-index:1;}
-.footer-brand{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.2rem;letter-spacing:0.28em;color:var(--dim);margin-bottom:1.5rem;display:block;}
-.social-links{display:flex;gap:1.5rem;justify-content:center;margin-bottom:2rem;}
+/* FOOTER */
+footer{padding:3rem 1.25rem;border-top:1px solid rgba(124,92,252,0.08);text-align:center;background:rgba(4,3,10,0.9);position:relative;z-index:1;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.1rem;letter-spacing:0.25em;color:var(--dim);margin-bottom:1.25rem;display:block;}
+.social-links{display:flex;gap:1.25rem;justify-content:center;margin-bottom:1.75rem;}
 .social-links a{color:var(--muted);transition:color 0.3s;text-decoration:none;}
 .social-links a:hover{color:var(--accent);}
-.footer-copy{font-size:0.52rem;font-weight:700;letter-spacing:0.55em;text-transform:uppercase;color:var(--muted);opacity:0.3;}
+.footer-copy{font-size:0.5rem;font-weight:700;letter-spacing:0.5em;text-transform:uppercase;color:var(--muted);opacity:0.3;}
 </style>
 </head>
 <body>
@@ -184,35 +193,37 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
 
 <div class="wrap">
 
-  <!-- PRODUCTO 1 -->
-  <section class="hero">
-    <span class="pill">Protocolo · Nivel I · 15 días</span>
-    <h1 class="hero-title">
-      Protocolo de<br>
-      <span class="accent">15 días</span><br>
-      <span class="serif">para dejar de sobrepensar.</span>
-    </h1>
+  <!-- ── PRODUCTO 1 ── -->
+  <section class="section" style="padding-top:7rem;">
+    <div class="section-inner centered">
+      <span class="pill">Protocolo · Nivel I · 15 días</span>
+      <h1 class="hero-title">
+        Protocolo de<br>
+        <span class="accent">15 días</span><br>
+        <span class="serif">para dejar de sobrepensar.</span>
+      </h1>
 
-    <div class="hero-book">
-      <div class="hero-book-glow"></div>
-      <img src="https://i.postimg.cc/LJD9ZXxx9/portada-azul.png" alt="Protocolo Nivel I">
-    </div>
+      <div class="book-wrap">
+        <div class="book-glow" style="background:radial-gradient(circle,rgba(124,92,252,0.4),transparent 70%);"></div>
+        <img src="https://i.postimg.cc/W1X5m0J8/ebook.png" alt="Protocolo 15 días para dejar de sobrepensar" class="float-1">
+      </div>
 
-    <div class="prod-card">
-      <p class="prod-desc">No es un libro para "sentirte mejor". Es un sistema para recuperar el control de tu mente.</p>
-      <p class="prod-desc">Este protocolo está diseñado para personas que viven atrapadas en el sobrepensamiento, la ansiedad constante y la falta de enfoque. A lo largo de 15 días, vas a aplicar técnicas prácticas que actúan directamente sobre tu sistema nervioso, ayudándote a cortar el ruido mental y volver a la acción.</p>
-      <p class="prod-desc">Acá no vas a encontrar frases vacías ni teoría innecesaria. Cada día tiene una misión concreta que te entrena a pensar menos y vivir más.</p>
-      <p class="prod-desc">Si sentís que tu mente no se apaga nunca, este es el punto de partida para recuperar claridad, control y presencia.</p>
-      <div class="garantia">
-        <span class="garantia-icon">🛡️</span>
-        <span><strong>7 días de garantía.</strong> Si no te sirve, te devolvemos el dinero. Sin preguntas.</span>
+      <div class="prod-card">
+        <p class="prod-desc">No es un libro para "sentirte mejor". Es un sistema para recuperar el control de tu mente.</p>
+        <p class="prod-desc">Este protocolo está diseñado para personas que viven atrapadas en el sobrepensamiento, la ansiedad constante y la falta de enfoque. A lo largo de 15 días, vas a aplicar técnicas prácticas que te ayudan a cortar el ruido mental y volver a la acción.</p>
+        <p class="prod-desc">Acá no vas a encontrar frases vacías ni teoría innecesaria. Cada día tiene una misión concreta que te entrena a pensar menos y vivir más.</p>
+        <p class="prod-desc">Si sentís que tu mente no se apaga nunca, este es el punto de partida para recuperar claridad, control y presencia.</p>
+        <div class="garantia">
+          <span class="garantia-icon">🛡️</span>
+          <span><strong>7 días de garantía.</strong> Si no te sirve, te devolvemos el dinero. Sin preguntas.</span>
+        </div>
+        <div class="price-row">
+          <span class="price-old">$7.99</span>
+          <span class="price-new">$3.99</span>
+          <span class="price-tag">Acceso inmediato</span>
+        </div>
+        <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary">Comprar ahora</a>
       </div>
-      <div class="hero-price">
-        <span class="price-old">$7.99</span>
-        <span class="price-new">$3.99</span>
-        <span class="price-tag">Acceso inmediato</span>
-      </div>
-      <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary">Comprar ahora</a>
     </div>
   </section>
 
@@ -234,8 +245,8 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
   <div class="divider"></div>
 
   <!-- SPIRITUAL -->
-  <section class="spiritual">
-    <div class="spiritual-inner">
+  <section class="section" style="background:rgba(7,5,26,0.4);">
+    <div class="section-inner centered">
       <span class="section-label">El camino hacia adentro</span>
       <h2 class="section-title">Primero<br><span style="color:var(--accent)">el</span><br>cuerpo</h2>
       <p class="section-body">La mente no puede aquietarse sola. Cuando el cuerpo carga el peso del miedo, la paz se vuelve inalcanzable. Este protocolo desciende: libera desde las raíces.</p>
@@ -268,8 +279,8 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
   <div class="divider"></div>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="testimonials-inner">
+  <section class="section">
+    <div class="section-inner centered">
       <h2 class="testi-title">Lo que dicen<br><span class="testi-serif">quienes ya lo vivieron</span></h2>
       <p class="testi-sub">Personas reales, resultados reales.</p>
       <div class="testi-grid">
@@ -286,7 +297,7 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
         </div>
         <div class="testi-card">
           <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Nunca creí en este tipo de cosas, pero lo compré porque eran 7.99 y tenía curiosidad. Me arrepiento de no haberlo encontrado antes."</p>
+          <p class="testi-text">"Nunca creí en este tipo de cosas, pero lo compré porque eran 20000 pesos y tenía curiosidad. Me arrepiento de no haberlo encontrado antes."</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:rgba(252,92,163,0.12);color:var(--rose);">CR</div>
             <div>
@@ -312,30 +323,30 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
 
   <div class="divider" style="background:linear-gradient(90deg,transparent,rgba(252,92,163,0.3),rgba(124,92,252,0.2),transparent)"></div>
 
-  <!-- PRODUCTO 2 -->
-  <section class="product2">
-    <div class="product2-inner">
+  <!-- ── PRODUCTO 2 ── -->
+  <section class="section" style="background:linear-gradient(180deg,transparent,rgba(252,92,163,0.05),transparent);">
+    <div class="section-inner centered">
       <span class="badge-off">40% OFF · Lanzamiento</span>
       <h2 class="product2-title">El Código<br><span class="rose">del Corazón</span></h2>
 
-      <div class="product2-book">
-        <div class="product2-book-glow"></div>
-        <img src="https://via.placeholder.com/600x800/0a0515/fc5ca3?text=CÓDIGO+DEL+CORAZÓN" alt="El Código del Corazón">
+      <div class="book-wrap">
+        <div class="book-glow" style="background:radial-gradient(circle,rgba(252,92,163,0.3),transparent 70%);"></div>
+        <img src="https://i.postimg.cc/PrqppZT5/codigo.webp" alt="El Código del Corazón" class="float-2">
       </div>
 
-      <div class="prod-card" style="border-color:rgba(252,92,163,0.2);background:rgba(252,92,163,0.04);">
+      <div class="prod-card rose-card">
         <p class="prod-desc">Este ebook explica, de forma clara y profunda, por qué el apego emocional duele tanto y cómo salir de ese ciclo sin perder tu sensibilidad. No se trata de volverte frío, sino de construir una forma más sana y fuerte de vincularte.</p>
         <p class="prod-desc">A través de un enfoque basado en la psicología y la biología del comportamiento, vas a entender qué pasa en tu mente cuando no podés soltar, y cómo empezar a reconstruir tu identidad sin depender de otra persona.</p>
         <p class="prod-desc">Incluye un proceso paso a paso para cortar la dependencia emocional, tolerar el vacío y volver a elegir desde la seguridad, no desde la necesidad.</p>
         <p class="prod-desc">Si alguna vez sentiste que alguien tenía demasiado poder sobre vos, este libro te muestra cómo recuperarlo.</p>
-        <div class="garantia" style="border-color:rgba(252,92,163,0.2);background:rgba(252,92,163,0.06);">
+        <div class="garantia rose-g">
           <span class="garantia-icon">🛡️</span>
           <span><strong>7 días de garantía.</strong> Si no te sirve, te devolvemos el dinero. Sin preguntas.</span>
         </div>
-        <div class="hero-price" style="justify-content:center;margin-top:1.5rem;">
+        <div class="price-row">
           <span class="price-old">$14.99</span>
           <span class="price-new" style="color:var(--rose)">$7.99</span>
-          <span class="price-tag" style="color:var(--rose)">Acceso inmediato</span>
+          <span class="price-tag rose">Acceso inmediato</span>
         </div>
         <a href="https://go.hotmart.com/B104427503H?dp=1" target="_blank" class="btn-rose">Comprar ahora</a>
       </div>
@@ -345,23 +356,23 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
   <div class="divider"></div>
 
   <!-- FAQ -->
-  <section class="faq">
-    <div class="faq-inner">
+  <section class="section" style="background:rgba(7,5,26,0.4);">
+    <div class="section-inner centered">
       <h2 class="faq-title">Preguntas <span class="faq-serif">frecuentes</span></h2>
       <details>
-        <summary>¿Esto es meditación o autoayuda? <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+        <summary>¿Esto es meditación o autoayuda? <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
         <div class="faq-body">No. Son técnicas físicas concretas: cosas que hacés con el cuerpo para que la mente se aquiete. Sin meditación, sin frases motivacionales, sin esfuerzo mental.</div>
       </details>
       <details>
-        <summary>¿Funciona si nunca hice nada de esto? <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+        <summary>¿Funciona si nunca hice nada de esto? <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
         <div class="faq-body">Especialmente si nunca hiciste nada. Está diseñado para personas que se cansaron de intentar cosas que no funcionaron. No necesitás experiencia previa.</div>
       </details>
       <details>
-        <summary>¿Por qué tan barato? <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+        <summary>¿Por qué tan barato? <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
         <div class="faq-body">Porque queremos que el precio nunca sea la razón para no empezar. Es un protocolo de entrada: si te cambia la vida, volvés por más. Si no, no perdiste nada.</div>
       </details>
       <details>
-        <summary>¿Cuándo recibo el material? <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+        <summary>¿Cuándo recibo el material? <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
         <div class="faq-body">Al instante. Apenas confirmás el pago te llega el enlace de descarga al correo. Sin esperas.</div>
       </details>
     </div>
@@ -369,8 +380,8 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
 
   <!-- PRICING -->
   <section class="pricing" id="precio">
-    <div class="orbit-ring" style="width:700px;height:700px;"></div>
-    <div class="orbit-ring" style="width:480px;height:480px;opacity:0.5;"></div>
+    <div class="orbit-ring" style="width:650px;height:650px;"></div>
+    <div class="orbit-ring" style="width:440px;height:440px;opacity:0.5;"></div>
     <div class="pricing-card">
       <span class="pricing-eyebrow">Tomá la decisión hoy</span>
       <h2 class="pricing-headline">Empezá<br><span style="color:var(--accent)">a sanar</span></h2>
@@ -391,10 +402,11 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
         <span class="feat-chip">Acceso inmediato</span>
         <span class="feat-chip">Descarga digital</span>
         <span class="feat-chip">Sin suscripción</span>
+        <span class="feat-chip">7 días de garantía</span>
       </div>
       <div class="pricing-btns">
-        <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary" style="max-width:100%">Quiero dejar de sobrepensar — $3.99</a>
-        <a href="https://go.hotmart.com/B104427503H?dp=1" target="_blank" class="btn-rose" style="max-width:100%">Quiero soltar lo que me pesa — $7.99</a>
+        <a href="https://go.hotmart.com/R104096661X?dp=1" target="_blank" class="btn-primary">Quiero dejar de sobrepensar — $3.99</a>
+        <a href="https://go.hotmart.com/B104427503H?dp=1" target="_blank" class="btn-rose">Quiero soltar lo que me pesa — $7.99</a>
       </div>
       <p class="pricing-note">Pago seguro · Sin renovaciones automáticas</p>
     </div>
@@ -402,9 +414,9 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
 
   <!-- RECOMENDACIONES -->
   <div class="divider" style="background:linear-gradient(90deg,transparent,rgba(245,200,66,0.2),rgba(124,92,252,0.15),transparent)"></div>
-  <section class="recom">
-    <div class="recom-inner">
-      <span class="section-label" style="text-align:center;display:block;">Para seguir expandiéndote</span>
+  <section class="section">
+    <div class="section-inner centered">
+      <span class="section-label">Para seguir expandiéndote</span>
       <h2 class="recom-title">Lectura que<br><span class="recom-serif">complementa</span></h2>
       <p class="recom-sub">Si los protocolos te transformaron por dentro, este libro te da las palabras para entender por qué.</p>
       <a href="https://go.hotmart.com/F104427580F" target="_blank" class="recom-card">
@@ -415,7 +427,7 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
         <div class="recom-info">
           <span class="recom-tag">Lectura recomendada</span>
           <div class="recom-name">Cómo Eliminar los Síntomas Físicos de la Ansiedad</div>
-          <p class="recom-desc">Si sentís el cuerpo tenso, el pecho apretado o el estómago revuelto sin razón aparente, este libro explica por qué pasa y cómo parar.</p>
+          <p class="recom-desc">Si sentís el cuerpo tenso, el pecho apretado o el estómago revuelto sin razón, este libro explica por qué pasa y cómo parar.</p>
           <div class="recom-cta"><span>Acceder al libro</span><span>→</span></div>
         </div>
       </a>
@@ -427,10 +439,10 @@ footer{padding:3.5rem 1.5rem;border-top:1px solid rgba(124,92,252,0.08);text-ali
     <span class="footer-brand">Espiritual Mente</span>
     <div class="social-links">
       <a href="https://instagram.com/espiritualmentelab" target="_blank" aria-label="Instagram">
-        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
       <a href="https://facebook.com/espiritualmentelab" target="_blank" aria-label="Facebook">
-        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
       </a>
     </div>
     <p class="footer-copy">Espiritual Mente Lab · All Rights Reserved</p>
@@ -442,7 +454,7 @@ const canvas=document.getElementById('stars-canvas');
 const ctx=canvas.getContext('2d');
 function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
 resize();window.addEventListener('resize',resize);
-const stars=Array.from({length:220},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.1+0.2,o:Math.random()*0.6+0.1,t:Math.random()*Math.PI*2,s:Math.random()*0.008+0.003}));
+const stars=Array.from({length:200},()=>({x:Math.random(),y:Math.random(),r:Math.random()*1.1+0.2,o:Math.random()*0.6+0.1,t:Math.random()*Math.PI*2,s:Math.random()*0.008+0.003}));
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   stars.forEach(s=>{s.t+=s.s;ctx.beginPath();ctx.arc(s.x*canvas.width,s.y*canvas.height,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(210,205,255,${s.o*(0.6+0.4*Math.sin(s.t))})`;ctx.fill();});
